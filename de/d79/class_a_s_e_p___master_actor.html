@@ -113,8 +113,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af427e2a0ea8f80896d58690de8abd8a1"><td class="memItemLeft" align="right" valign="top"><a id="af427e2a0ea8f80896d58690de8abd8a1" name="af427e2a0ea8f80896d58690de8abd8a1"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>BeginPlay</b> () override</td></tr>
 <tr class="separator:af427e2a0ea8f80896d58690de8abd8a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6818e5ea6b7df7424923c07a0c5ae6f"><td class="memItemLeft" align="right" valign="top"><a id="aa6818e5ea6b7df7424923c07a0c5ae6f" name="aa6818e5ea6b7df7424923c07a0c5ae6f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnConstruction</b> (const FTransform &amp;Transform) override</td></tr>
+<tr class="separator:aa6818e5ea6b7df7424923c07a0c5ae6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a6ed7bd84dbebfe5013bb8472c7fe0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a2a6ed7bd84dbebfe5013bb8472c7fe0d">MoveElevatorToTarget</a> (int32 TargetFloor)</td></tr>
 <tr class="separator:a2a6ed7bd84dbebfe5013bb8472c7fe0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab43cc2536a975a09c8f7ac619f7f3243"><td class="memItemLeft" align="right" valign="top"><a id="ab43cc2536a975a09c8f7ac619f7f3243" name="ab43cc2536a975a09c8f7ac619f7f3243"></a>
+<a class="el" href="../../dc/de8/struct_f_save_data.html">FSaveData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetActorDataToSave</b> () const</td></tr>
+<tr class="separator:ab43cc2536a975a09c8f7ac619f7f3243"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15ae488e5cf266221610c12d84d981d6"><td class="memItemLeft" align="right" valign="top"><a id="a15ae488e5cf266221610c12d84d981d6" name="a15ae488e5cf266221610c12d84d981d6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetLoadedData</b> (int32 LocalStartingFloor, bool LocalIsElevatorMoving, int32 LocalTargetFloor, TArray&lt; int32 &gt; LocalFloorsQueue)</td></tr>
+<tr class="separator:a15ae488e5cf266221610c12d84d981d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88ab0c696b48159b2cd6fc422b3c28b0"><td class="memItemLeft" align="right" valign="top"><a id="a88ab0c696b48159b2cd6fc422b3c28b0" name="a88ab0c696b48159b2cd6fc422b3c28b0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SaveElevatorDataCustomObject</b> ()</td></tr>
+<tr class="separator:a88ab0c696b48159b2cd6fc422b3c28b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26bc39636b8c5250732bf446922ef984"><td class="memItemLeft" align="right" valign="top"><a id="a26bc39636b8c5250732bf446922ef984" name="a26bc39636b8c5250732bf446922ef984"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadElevatorDataCustomObject</b> (int32 ActorIndex)</td></tr>
+<tr class="separator:a26bc39636b8c5250732bf446922ef984"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -184,11 +199,12 @@ UAudioComponent *&#160;</td><td class="memItemRight" valign="bottom"><b>Elevator
 <tr class="memitem:acf719a5cbcbeadee668790c5fc92962b"><td class="memItemLeft" align="right" valign="top"><a id="acf719a5cbcbeadee668790c5fc92962b" name="acf719a5cbcbeadee668790c5fc92962b"></a>
 UAudioComponent *&#160;</td><td class="memItemRight" valign="bottom"><b>ElevatorMusicAudioComponent</b></td></tr>
 <tr class="separator:acf719a5cbcbeadee668790c5fc92962b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa4219ec51010a04f9ae383b328182c7"><td class="memItemLeft" align="right" valign="top"><a id="afa4219ec51010a04f9ae383b328182c7" name="afa4219ec51010a04f9ae383b328182c7"></a>
+FAutoSaveDelegate&#160;</td><td class="memItemRight" valign="bottom"><b>SaveDelegate</b></td></tr>
+<tr class="separator:afa4219ec51010a04f9ae383b328182c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a59a8e6d1c30c07e3f415dd40d9fc0dd2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a59a8e6d1c30c07e3f415dd40d9fc0dd2">UPROPERTY</a> (EditAnywhere, BlueprintReadOnly, Category=&quot;SEP&quot;, meta=(EditCondition=&quot;bUseSaveGameSystem&quot;, EditConditionHides)) <a class="el" href="../../de/d9a/struct_f_save_settings.html">FSaveSettings</a> SaveSettings</td></tr>
-<tr class="separator:a59a8e6d1c30c07e3f415dd40d9fc0dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab35e121cdb7131f3767303aa9fb10755"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#ab35e121cdb7131f3767303aa9fb10755">CallElevatorToFloor</a> (UObject *Object)</td></tr>
 <tr class="separator:ab35e121cdb7131f3767303aa9fb10755"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8980eb889e9f250783638645844f6a11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a8980eb889e9f250783638645844f6a11">OpenDoors</a> ()</td></tr>
@@ -199,16 +215,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a11ab9041a03de7dee69156e31c010612"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af024a1b07f0f3eb6089a78c480a99f13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#af024a1b07f0f3eb6089a78c480a99f13">SetStartingFloor</a> (int32 NewFloor)</td></tr>
 <tr class="separator:af024a1b07f0f3eb6089a78c480a99f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a656da1cf480fc3cab215a2ce86af89b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a656da1cf480fc3cab215a2ce86af89b7">UpdateInteractionBox</a> ()</td></tr>
-<tr class="separator:a656da1cf480fc3cab215a2ce86af89b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f4048ae3bbcd3ad118a4cc90e295d1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a3f4048ae3bbcd3ad118a4cc90e295d1b">UpdateInteractionBox</a> () const</td></tr>
+<tr class="separator:a3f4048ae3bbcd3ad118a4cc90e295d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3361dd2c3c8a839669cababddd21b175"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a3361dd2c3c8a839669cababddd21b175">GenerateCollisionBoxes</a> ()</td></tr>
 <tr class="separator:a3361dd2c3c8a839669cababddd21b175"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4ed374f8048308af665597344334a6d"><td class="memItemLeft" align="right" valign="top"><a id="ad4ed374f8048308af665597344334a6d" name="ad4ed374f8048308af665597344334a6d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ToggleInternalDoorVisibility</b> () const</td></tr>
-<tr class="separator:ad4ed374f8048308af665597344334a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06019294bfcee681cb7ec7e1e81852d9"><td class="memItemLeft" align="right" valign="top"><a id="a06019294bfcee681cb7ec7e1e81852d9" name="a06019294bfcee681cb7ec7e1e81852d9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DestroyExternalDoors</b> ()</td></tr>
-<tr class="separator:a06019294bfcee681cb7ec7e1e81852d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72de69abb369036d5f5e900f669eaefe"><td class="memItemLeft" align="right" valign="top"><a id="a72de69abb369036d5f5e900f669eaefe" name="a72de69abb369036d5f5e900f669eaefe"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>GenerateDoors</b> ()</td></tr>
 <tr class="separator:a72de69abb369036d5f5e900f669eaefe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -235,28 +245,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ToggleElevatorWidget<
 <tr class="separator:a5f7e893a630f149e2986850cb91ff61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61b91d5ddefd65a57a12038678f10579"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/de9/struct_f_audio_configuration.html">FAudioConfiguration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a61b91d5ddefd65a57a12038678f10579">GetCurrentAudioConfig</a> ()</td></tr>
 <tr class="separator:a61b91d5ddefd65a57a12038678f10579"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab997338be1f43fb761983fd0e0bb3e8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#ab997338be1f43fb761983fd0e0bb3e8b">PlaySound</a> (bool AtComponent, UAudioComponent *TargetComponent, USoundBase *SoundToPlay)</td></tr>
-<tr class="separator:ab997338be1f43fb761983fd0e0bb3e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96f2b986ead295319c783eccf5f6dad6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a96f2b986ead295319c783eccf5f6dad6">StopPlayingSound</a> (UAudioComponent *TargetComponent)</td></tr>
-<tr class="separator:a96f2b986ead295319c783eccf5f6dad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b6d7bcef246ff1e6e3caf9706a20173"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a0b6d7bcef246ff1e6e3caf9706a20173">PlaySound</a> (bool AtComponent, UAudioComponent *TargetComponent, USoundBase *SoundToPlay) const</td></tr>
+<tr class="separator:a0b6d7bcef246ff1e6e3caf9706a20173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f76662fd569a733314746826dd03a11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a0f76662fd569a733314746826dd03a11">StopPlayingSound</a> (UAudioComponent *TargetComponent) const</td></tr>
+<tr class="separator:a0f76662fd569a733314746826dd03a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7b1df6f14efd5c0d1f76a15db45c4db"><td class="memItemLeft" align="right" valign="top">FRotator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#af7b1df6f14efd5c0d1f76a15db45c4db">ConvertVectorToRotator</a> (FVector Vector) const</td></tr>
 <tr class="separator:af7b1df6f14efd5c0d1f76a15db45c4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77c7e1c83a4abe8346b553db2bd068ac"><td class="memItemLeft" align="right" valign="top">UStaticMeshComponent *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a77c7e1c83a4abe8346b553db2bd068ac">GetExternalDoorMeshByFloorNumber</a> (int FloorNumber, TEnumAsByte&lt; EDoorSide &gt; DoorSide)</td></tr>
 <tr class="separator:a77c7e1c83a4abe8346b553db2bd068ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12055c10bc24439f913486045b6e598e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a12055c10bc24439f913486045b6e598e">GetClosestFloorToPlayer</a> (APawn *Player)</td></tr>
-<tr class="separator:a12055c10bc24439f913486045b6e598e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af05f625f4fd4e9f8f363bcb7c1e62b11"><td class="memItemLeft" align="right" valign="top"><a id="af05f625f4fd4e9f8f363bcb7c1e62b11" name="af05f625f4fd4e9f8f363bcb7c1e62b11"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SaveElevatorData</b> ()</td></tr>
-<tr class="separator:af05f625f4fd4e9f8f363bcb7c1e62b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88ab0c696b48159b2cd6fc422b3c28b0"><td class="memItemLeft" align="right" valign="top"><a id="a88ab0c696b48159b2cd6fc422b3c28b0" name="a88ab0c696b48159b2cd6fc422b3c28b0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SaveElevatorDataCustomObject</b> ()</td></tr>
-<tr class="separator:a88ab0c696b48159b2cd6fc422b3c28b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5eeaa5398e356ca63f2994c86335becf"><td class="memItemLeft" align="right" valign="top"><a id="a5eeaa5398e356ca63f2994c86335becf" name="a5eeaa5398e356ca63f2994c86335becf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadElevatorData</b> ()</td></tr>
-<tr class="separator:a5eeaa5398e356ca63f2994c86335becf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade9e0c51f55722a98105e9a2accb6a35"><td class="memItemLeft" align="right" valign="top"><a id="ade9e0c51f55722a98105e9a2accb6a35" name="ade9e0c51f55722a98105e9a2accb6a35"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadElevatorDataCustomObject</b> ()</td></tr>
-<tr class="separator:ade9e0c51f55722a98105e9a2accb6a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c375679a5bcbf755d735d6e50b5c494"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a9c375679a5bcbf755d735d6e50b5c494">GetClosestFloorToPlayer</a> (APawn *Player, int &amp;Floor)</td></tr>
+<tr class="separator:a9c375679a5bcbf755d735d6e50b5c494"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b00f9182ccc770139c9923aaba4028f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a0b00f9182ccc770139c9923aaba4028f">LoadCustomSave</a> (const <a class="el" href="../../dc/de8/struct_f_save_data.html">FSaveData</a> &amp;Save)</td></tr>
 <tr class="separator:a0b00f9182ccc770139c9923aaba4028f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -267,8 +265,6 @@ Static Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a22e9db7c0adb7fdffbda4f85075cae14"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a22e9db7c0adb7fdffbda4f85075cae14">bUseSaveGameSystem</a></td></tr>
-<tr class="separator:a22e9db7c0adb7fdffbda4f85075cae14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a29faf15763ea9aa8b50390c0507e77"><td class="memItemLeft" align="right" valign="top"><a id="a3a29faf15763ea9aa8b50390c0507e77" name="a3a29faf15763ea9aa8b50390c0507e77"></a>
 <a class="el" href="../../d0/de3/struct_f_external_doors.html">FExternalDoors</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ExternalDoorsConfiguration</b></td></tr>
 <tr class="separator:a3a29faf15763ea9aa8b50390c0507e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -462,7 +458,7 @@ TArray&lt; int32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Floo
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Check if a floor exists. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>//This function iterates through the FloorConfiguration array to check if the TargetFloor exists. If it does, it returns true, otherwise it returns false. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">TargetFloor</td><td>The floor number to check for existence. </td></tr>
   </table>
@@ -570,8 +566,8 @@ TArray&lt; int32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Floo
 
 </div>
 </div>
-<a id="a12055c10bc24439f913486045b6e598e" name="a12055c10bc24439f913486045b6e598e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12055c10bc24439f913486045b6e598e">&#9670;&#160;</a></span>GetClosestFloorToPlayer()</h2>
+<a id="a9c375679a5bcbf755d735d6e50b5c494" name="a9c375679a5bcbf755d735d6e50b5c494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c375679a5bcbf755d735d6e50b5c494">&#9670;&#160;</a></span>GetClosestFloorToPlayer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -580,11 +576,21 @@ TArray&lt; int32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Floo
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ASEP_MasterActor::GetClosestFloorToPlayer </td>
+          <td class="memname">bool ASEP_MasterActor::GetClosestFloorToPlayer </td>
           <td>(</td>
           <td class="paramtype">APawn *&#160;</td>
-          <td class="paramname"><em>Player</em></td><td>)</td>
+          <td class="paramname"><em>Player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>Floor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -596,10 +602,11 @@ TArray&lt; int32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Floo
 <p>This Function gets the closest floor to the player character pawn, if any. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Player</td><td>The reference to the player character pawn </td></tr>
+    <tr><td class="paramname">Floor</td><td>The closest floor to the player character pawn, if any </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The closest floor to the player character pawn, if any </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if player exists, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -1056,8 +1063,8 @@ TArray&lt; int32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Floo
 
 </div>
 </div>
-<a id="ab997338be1f43fb761983fd0e0bb3e8b" name="ab997338be1f43fb761983fd0e0bb3e8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab997338be1f43fb761983fd0e0bb3e8b">&#9670;&#160;</a></span>PlaySound()</h2>
+<a id="a0b6d7bcef246ff1e6e3caf9706a20173" name="a0b6d7bcef246ff1e6e3caf9706a20173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b6d7bcef246ff1e6e3caf9706a20173">&#9670;&#160;</a></span>PlaySound()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1086,7 +1093,7 @@ TArray&lt; int32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Floo
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -1164,8 +1171,8 @@ TArray&lt; int32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Floo
 
 </div>
 </div>
-<a id="a96f2b986ead295319c783eccf5f6dad6" name="a96f2b986ead295319c783eccf5f6dad6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96f2b986ead295319c783eccf5f6dad6">&#9670;&#160;</a></span>StopPlayingSound()</h2>
+<a id="a0f76662fd569a733314746826dd03a11" name="a0f76662fd569a733314746826dd03a11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f76662fd569a733314746826dd03a11">&#9670;&#160;</a></span>StopPlayingSound()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1178,7 +1185,7 @@ TArray&lt; int32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Floo
           <td>(</td>
           <td class="paramtype">UAudioComponent *&#160;</td>
           <td class="paramname"><em>TargetComponent</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -1196,8 +1203,8 @@ TArray&lt; int32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Floo
 
 </div>
 </div>
-<a id="a656da1cf480fc3cab215a2ce86af89b7" name="a656da1cf480fc3cab215a2ce86af89b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a656da1cf480fc3cab215a2ce86af89b7">&#9670;&#160;</a></span>UpdateInteractionBox()</h2>
+<a id="a3f4048ae3bbcd3ad118a4cc90e295d1b" name="a3f4048ae3bbcd3ad118a4cc90e295d1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f4048ae3bbcd3ad118a4cc90e295d1b">&#9670;&#160;</a></span>UpdateInteractionBox()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1209,7 +1216,7 @@ TArray&lt; int32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Floo
           <td class="memname">void ASEP_MasterActor::UpdateInteractionBox </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -1222,79 +1229,7 @@ TArray&lt; int32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Floo
 
 </div>
 </div>
-<a id="a59a8e6d1c30c07e3f415dd40d9fc0dd2" name="a59a8e6d1c30c07e3f415dd40d9fc0dd2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59a8e6d1c30c07e3f415dd40d9fc0dd2">&#9670;&#160;</a></span>UPROPERTY()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ASEP_MasterActor::UPROPERTY </td>
-          <td>(</td>
-          <td class="paramtype">EditAnywhere&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">BlueprintReadOnly&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Category&#160;</td>
-          <td class="paramname"> = <code>&quot;SEP&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">meta&#160;</td>
-          <td class="paramname"> = <code>(EditCondition=&quot;bUseSaveGameSystem&quot;,&#160;EditConditionHides)</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>SaveSettings property for handling save game settings, only in use when UseSaveGameSystem is true. </p>
-
-</div>
-</div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a22e9db7c0adb7fdffbda4f85075cae14" name="a22e9db7c0adb7fdffbda4f85075cae14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22e9db7c0adb7fdffbda4f85075cae14">&#9670;&#160;</a></span>bUseSaveGameSystem</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ASEP_MasterActor::bUseSaveGameSystem</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Whether to use the save game system or not. Enable this to use the save game system, disable it to prevent its usage. </p>
-
-</div>
-</div>
 <a id="adb0b697a4bf04e0f9b5ab8176ad07b86" name="adb0b697a4bf04e0f9b5ab8176ad07b86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb0b697a4bf04e0f9b5ab8176ad07b86">&#9670;&#160;</a></span>ElevatorMovementSpeed</h2>
 

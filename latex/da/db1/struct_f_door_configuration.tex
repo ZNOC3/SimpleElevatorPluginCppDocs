@@ -9,14 +9,26 @@
 \mbox{\Hypertarget{struct_f_door_configuration_a7b88f142105bea03dd76a763d975e66e}\label{struct_f_door_configuration_a7b88f142105bea03dd76a763d975e66e}} 
 {\bfseries UPROPERTY} (Edit\+Anywhere, Blueprint\+Read\+Only, Category=\char`\"{}SEP\char`\"{}, meta=(Clamp\+Min=0.\+1, Clamp\+Max=10.\+0, Edit\+Condition=\char`\"{}Door\+Type == EDoor\+Movement\+Type\+::\+Linear\char`\"{}, Edit\+Condition\+Hides)) float Door\+Movement\+Speed
 \item 
-\mbox{\Hypertarget{struct_f_door_configuration_a2e87056e400432a401ae6e1a057be7ca}\label{struct_f_door_configuration_a2e87056e400432a401ae6e1a057be7ca}} 
-{\bfseries UPROPERTY} (Edit\+Instance\+Only, Blueprint\+Read\+Write, Category=\char`\"{}SEP\char`\"{}, meta=(Edit\+Condition=\char`\"{}Door\+Movement\+Direction == EDoor\+Direction\+::Z \&\& Door\+Type == EDoor\+Movement\+Type\+::\+Linear\char`\"{}, Edit\+Condition\+Hides)) bool b\+Doors\+Move\+In\+The\+Same\+Direction
+\mbox{\Hypertarget{struct_f_door_configuration_a076972defa3d2304e845628b0410b2d4}\label{struct_f_door_configuration_a076972defa3d2304e845628b0410b2d4}} 
+{\bfseries UPROPERTY} (Edit\+Anywhere, Blueprint\+Read\+Only, Category=\char`\"{}SEP\char`\"{}, meta=(Edit\+Condition=\char`\"{}Door\+Type == EDoor\+Movement\+Type\+::\+Linear\char`\"{}, Edit\+Condition\+Hides)) bool b\+Left\+Door\+Mirrors\+Movement
 \item 
-\mbox{\Hypertarget{struct_f_door_configuration_a4c0aa7debe3358c35f3c45662fbfd2ca}\label{struct_f_door_configuration_a4c0aa7debe3358c35f3c45662fbfd2ca}} 
-{\bfseries UPROPERTY} (Edit\+Instance\+Only, Blueprint\+Read\+Write, Category=\char`\"{}SEP\char`\"{}, meta=(Edit\+Condition=\char`\"{}Door\+Type == EDoor\+Movement\+Type\+::\+Linear\char`\"{}, Edit\+Condition\+Hides)) float Opened\+Door\+Location
+\mbox{\Hypertarget{struct_f_door_configuration_a6da042973ec70ca6845a9257e4e5326f}\label{struct_f_door_configuration_a6da042973ec70ca6845a9257e4e5326f}} 
+{\bfseries UPROPERTY} (Edit\+Instance\+Only, Blueprint\+Read\+Write, Category=\char`\"{}SEP\char`\"{}, meta=(Edit\+Condition=\char`\"{}Door\+Type == EDoor\+Movement\+Type\+::\+Linear \&\& b\+Left\+Door\+Mirrors\+Movement\char`\"{}, Edit\+Condition\+Hides)) float Opened\+Door\+Location
 \item 
-\mbox{\Hypertarget{struct_f_door_configuration_a1beed18997c07f533743580c422e9f0a}\label{struct_f_door_configuration_a1beed18997c07f533743580c422e9f0a}} 
-{\bfseries UPROPERTY} (Edit\+Instance\+Only, Blueprint\+Read\+Write, Category=\char`\"{}SEP\char`\"{}, meta=(Edit\+Condition=\char`\"{}Door\+Type == EDoor\+Movement\+Type\+::\+Linear\char`\"{}, Edit\+Condition\+Hides)) float Closed\+Door\+Location=0
+\mbox{\Hypertarget{struct_f_door_configuration_ac174ba36c5b2a21ae77bf5e44bf78b62}\label{struct_f_door_configuration_ac174ba36c5b2a21ae77bf5e44bf78b62}} 
+{\bfseries UPROPERTY} (Edit\+Instance\+Only, Blueprint\+Read\+Write, Category=\char`\"{}SEP\char`\"{}, meta=(Edit\+Condition=\char`\"{}Door\+Type == EDoor\+Movement\+Type\+::\+Linear \&\& b\+Left\+Door\+Mirrors\+Movement\char`\"{}, Edit\+Condition\+Hides)) float Closed\+Door\+Location=0
+\item 
+\mbox{\Hypertarget{struct_f_door_configuration_a74889c327f3241497d5d8e0e35a1adf3}\label{struct_f_door_configuration_a74889c327f3241497d5d8e0e35a1adf3}} 
+{\bfseries UPROPERTY} (Edit\+Instance\+Only, Blueprint\+Read\+Write, Category=\char`\"{}SEP\char`\"{}, meta=(Edit\+Condition=\char`\"{}Door\+Type == EDoor\+Movement\+Type\+::\+Linear \&\& b\+Left\+Door\+Mirrors\+Movement == false\char`\"{}, Edit\+Condition\+Hides)) float Left\+Door\+Opened\+Location
+\item 
+\mbox{\Hypertarget{struct_f_door_configuration_a0afa9e7e8af916cb5673f2d657fea5b7}\label{struct_f_door_configuration_a0afa9e7e8af916cb5673f2d657fea5b7}} 
+{\bfseries UPROPERTY} (Edit\+Instance\+Only, Blueprint\+Read\+Write, Category=\char`\"{}SEP\char`\"{}, meta=(Edit\+Condition=\char`\"{}Door\+Type == EDoor\+Movement\+Type\+::\+Linear \&\& b\+Left\+Door\+Mirrors\+Movement == false\char`\"{}, Edit\+Condition\+Hides)) float Right\+Door\+Opened\+Location
+\item 
+\mbox{\Hypertarget{struct_f_door_configuration_a520fbb991d482feb581af9b6b07ed6b5}\label{struct_f_door_configuration_a520fbb991d482feb581af9b6b07ed6b5}} 
+{\bfseries UPROPERTY} (Edit\+Instance\+Only, Blueprint\+Read\+Write, Category=\char`\"{}SEP\char`\"{}, meta=(Edit\+Condition=\char`\"{}Door\+Type == EDoor\+Movement\+Type\+::\+Linear \&\& b\+Left\+Door\+Mirrors\+Movement == false\char`\"{}, Edit\+Condition\+Hides)) float Left\+Door\+Closed\+Location=0.f
+\item 
+\mbox{\Hypertarget{struct_f_door_configuration_ac5bd911bf826452797083c294f3814c6}\label{struct_f_door_configuration_ac5bd911bf826452797083c294f3814c6}} 
+{\bfseries UPROPERTY} (Edit\+Instance\+Only, Blueprint\+Read\+Write, Category=\char`\"{}SEP\char`\"{}, meta=(Edit\+Condition=\char`\"{}Door\+Type == EDoor\+Movement\+Type\+::\+Linear \&\& b\+Left\+Door\+Mirrors\+Movement == false\char`\"{}, Edit\+Condition\+Hides)) float Right\+Door\+Closed\+Location=0.f
 \item 
 \mbox{\Hypertarget{struct_f_door_configuration_a36e9a9cebe077619bbb7a896a8d482b1}\label{struct_f_door_configuration_a36e9a9cebe077619bbb7a896a8d482b1}} 
 {\bfseries UPROPERTY} (Edit\+Instance\+Only, Blueprint\+Read\+Write, Category=\char`\"{}SEP\char`\"{}, meta=(Edit\+Condition=\char`\"{}Door\+Type == EDoor\+Movement\+Type\+::\+Curve\char`\"{}, Edit\+Condition\+Hides)) bool b\+Both\+Doors\+Use\+The\+Same\+Curve

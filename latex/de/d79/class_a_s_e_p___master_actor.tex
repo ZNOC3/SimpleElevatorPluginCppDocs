@@ -12,7 +12,22 @@ Inheritance diagram for ASEP\+\_\+\+Master\+Actor\+:\begin{figure}[H]
 \mbox{\Hypertarget{class_a_s_e_p___master_actor_af427e2a0ea8f80896d58690de8abd8a1}\label{class_a_s_e_p___master_actor_af427e2a0ea8f80896d58690de8abd8a1}} 
 virtual void {\bfseries Begin\+Play} () override
 \item 
+\mbox{\Hypertarget{class_a_s_e_p___master_actor_aa6818e5ea6b7df7424923c07a0c5ae6f}\label{class_a_s_e_p___master_actor_aa6818e5ea6b7df7424923c07a0c5ae6f}} 
+virtual void {\bfseries On\+Construction} (const FTransform \&Transform) override
+\item 
 void \mbox{\hyperlink{class_a_s_e_p___master_actor_a2a6ed7bd84dbebfe5013bb8472c7fe0d}{Move\+Elevator\+To\+Target}} (int32 Target\+Floor)
+\item 
+\mbox{\Hypertarget{class_a_s_e_p___master_actor_ab43cc2536a975a09c8f7ac619f7f3243}\label{class_a_s_e_p___master_actor_ab43cc2536a975a09c8f7ac619f7f3243}} 
+\mbox{\hyperlink{struct_f_save_data}{FSave\+Data}} {\bfseries Get\+Actor\+Data\+To\+Save} () const
+\item 
+\mbox{\Hypertarget{class_a_s_e_p___master_actor_a15ae488e5cf266221610c12d84d981d6}\label{class_a_s_e_p___master_actor_a15ae488e5cf266221610c12d84d981d6}} 
+void {\bfseries Set\+Loaded\+Data} (int32 Local\+Starting\+Floor, bool Local\+Is\+Elevator\+Moving, int32 Local\+Target\+Floor, TArray$<$ int32 $>$ Local\+Floors\+Queue)
+\item 
+\mbox{\Hypertarget{class_a_s_e_p___master_actor_a88ab0c696b48159b2cd6fc422b3c28b0}\label{class_a_s_e_p___master_actor_a88ab0c696b48159b2cd6fc422b3c28b0}} 
+void {\bfseries Save\+Elevator\+Data\+Custom\+Object} ()
+\item 
+\mbox{\Hypertarget{class_a_s_e_p___master_actor_a26bc39636b8c5250732bf446922ef984}\label{class_a_s_e_p___master_actor_a26bc39636b8c5250732bf446922ef984}} 
+void {\bfseries Load\+Elevator\+Data\+Custom\+Object} (int32 Actor\+Index)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -82,11 +97,12 @@ UAudio\+Component $\ast$ {\bfseries Elevator\+Movement\+Audio\+Component}
 \item 
 \mbox{\Hypertarget{class_a_s_e_p___master_actor_acf719a5cbcbeadee668790c5fc92962b}\label{class_a_s_e_p___master_actor_acf719a5cbcbeadee668790c5fc92962b}} 
 UAudio\+Component $\ast$ {\bfseries Elevator\+Music\+Audio\+Component}
+\item 
+\mbox{\Hypertarget{class_a_s_e_p___master_actor_afa4219ec51010a04f9ae383b328182c7}\label{class_a_s_e_p___master_actor_afa4219ec51010a04f9ae383b328182c7}} 
+FAuto\+Save\+Delegate {\bfseries Save\+Delegate}
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{class_a_s_e_p___master_actor_a59a8e6d1c30c07e3f415dd40d9fc0dd2}{UPROPERTY}} (Edit\+Anywhere, Blueprint\+Read\+Only, Category=\char`\"{}SEP\char`\"{}, meta=(Edit\+Condition=\char`\"{}b\+Use\+Save\+Game\+System\char`\"{}, Edit\+Condition\+Hides)) \mbox{\hyperlink{struct_f_save_settings}{FSave\+Settings}} Save\+Settings
 \item 
 void \mbox{\hyperlink{class_a_s_e_p___master_actor_ab35e121cdb7131f3767303aa9fb10755}{Call\+Elevator\+To\+Floor}} (UObject $\ast$Object)
 \item 
@@ -98,15 +114,9 @@ void \mbox{\hyperlink{class_a_s_e_p___master_actor_a11ab9041a03de7dee69156e31c01
 \item 
 void \mbox{\hyperlink{class_a_s_e_p___master_actor_af024a1b07f0f3eb6089a78c480a99f13}{Set\+Starting\+Floor}} (int32 New\+Floor)
 \item 
-void \mbox{\hyperlink{class_a_s_e_p___master_actor_a656da1cf480fc3cab215a2ce86af89b7}{Update\+Interaction\+Box}} ()
+void \mbox{\hyperlink{class_a_s_e_p___master_actor_a3f4048ae3bbcd3ad118a4cc90e295d1b}{Update\+Interaction\+Box}} () const
 \item 
 void \mbox{\hyperlink{class_a_s_e_p___master_actor_a3361dd2c3c8a839669cababddd21b175}{Generate\+Collision\+Boxes}} ()
-\item 
-\mbox{\Hypertarget{class_a_s_e_p___master_actor_ad4ed374f8048308af665597344334a6d}\label{class_a_s_e_p___master_actor_ad4ed374f8048308af665597344334a6d}} 
-void {\bfseries Toggle\+Internal\+Door\+Visibility} () const
-\item 
-\mbox{\Hypertarget{class_a_s_e_p___master_actor_a06019294bfcee681cb7ec7e1e81852d9}\label{class_a_s_e_p___master_actor_a06019294bfcee681cb7ec7e1e81852d9}} 
-void {\bfseries Destroy\+External\+Doors} ()
 \item 
 \mbox{\Hypertarget{class_a_s_e_p___master_actor_a72de69abb369036d5f5e900f669eaefe}\label{class_a_s_e_p___master_actor_a72de69abb369036d5f5e900f669eaefe}} 
 void {\bfseries Generate\+Doors} ()
@@ -134,27 +144,15 @@ void \mbox{\hyperlink{class_a_s_e_p___master_actor_a5f7e893a630f149e2986850cb91f
 \item 
 \mbox{\hyperlink{struct_f_audio_configuration}{FAudio\+Configuration}} \mbox{\hyperlink{class_a_s_e_p___master_actor_a61b91d5ddefd65a57a12038678f10579}{Get\+Current\+Audio\+Config}} ()
 \item 
-void \mbox{\hyperlink{class_a_s_e_p___master_actor_ab997338be1f43fb761983fd0e0bb3e8b}{Play\+Sound}} (bool At\+Component, UAudio\+Component $\ast$Target\+Component, USound\+Base $\ast$Sound\+To\+Play)
+void \mbox{\hyperlink{class_a_s_e_p___master_actor_a0b6d7bcef246ff1e6e3caf9706a20173}{Play\+Sound}} (bool At\+Component, UAudio\+Component $\ast$Target\+Component, USound\+Base $\ast$Sound\+To\+Play) const
 \item 
-void \mbox{\hyperlink{class_a_s_e_p___master_actor_a96f2b986ead295319c783eccf5f6dad6}{Stop\+Playing\+Sound}} (UAudio\+Component $\ast$Target\+Component)
+void \mbox{\hyperlink{class_a_s_e_p___master_actor_a0f76662fd569a733314746826dd03a11}{Stop\+Playing\+Sound}} (UAudio\+Component $\ast$Target\+Component) const
 \item 
 FRotator \mbox{\hyperlink{class_a_s_e_p___master_actor_af7b1df6f14efd5c0d1f76a15db45c4db}{Convert\+Vector\+To\+Rotator}} (FVector Vector) const
 \item 
 UStatic\+Mesh\+Component $\ast$ \mbox{\hyperlink{class_a_s_e_p___master_actor_a77c7e1c83a4abe8346b553db2bd068ac}{Get\+External\+Door\+Mesh\+By\+Floor\+Number}} (int Floor\+Number, TEnum\+As\+Byte$<$ EDoor\+Side $>$ Door\+Side)
 \item 
-int \mbox{\hyperlink{class_a_s_e_p___master_actor_a12055c10bc24439f913486045b6e598e}{Get\+Closest\+Floor\+To\+Player}} (APawn $\ast$Player)
-\item 
-\mbox{\Hypertarget{class_a_s_e_p___master_actor_af05f625f4fd4e9f8f363bcb7c1e62b11}\label{class_a_s_e_p___master_actor_af05f625f4fd4e9f8f363bcb7c1e62b11}} 
-void {\bfseries Save\+Elevator\+Data} ()
-\item 
-\mbox{\Hypertarget{class_a_s_e_p___master_actor_a88ab0c696b48159b2cd6fc422b3c28b0}\label{class_a_s_e_p___master_actor_a88ab0c696b48159b2cd6fc422b3c28b0}} 
-void {\bfseries Save\+Elevator\+Data\+Custom\+Object} ()
-\item 
-\mbox{\Hypertarget{class_a_s_e_p___master_actor_a5eeaa5398e356ca63f2994c86335becf}\label{class_a_s_e_p___master_actor_a5eeaa5398e356ca63f2994c86335becf}} 
-void {\bfseries Load\+Elevator\+Data} ()
-\item 
-\mbox{\Hypertarget{class_a_s_e_p___master_actor_ade9e0c51f55722a98105e9a2accb6a35}\label{class_a_s_e_p___master_actor_ade9e0c51f55722a98105e9a2accb6a35}} 
-void {\bfseries Load\+Elevator\+Data\+Custom\+Object} ()
+bool \mbox{\hyperlink{class_a_s_e_p___master_actor_a9c375679a5bcbf755d735d6e50b5c494}{Get\+Closest\+Floor\+To\+Player}} (APawn $\ast$Player, int \&Floor)
 \item 
 void \mbox{\hyperlink{class_a_s_e_p___master_actor_a0b00f9182ccc770139c9923aaba4028f}{Load\+Custom\+Save}} (const \mbox{\hyperlink{struct_f_save_data}{FSave\+Data}} \&Save)
 \end{DoxyCompactItemize}
@@ -165,8 +163,6 @@ static float \mbox{\hyperlink{class_a_s_e_p___master_actor_ac36cc2b8108cf073a9c3
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
-\item 
-bool \mbox{\hyperlink{class_a_s_e_p___master_actor_a22e9db7c0adb7fdffbda4f85075cae14}{b\+Use\+Save\+Game\+System}}
 \item 
 \mbox{\Hypertarget{class_a_s_e_p___master_actor_a3a29faf15763ea9aa8b50390c0507e77}\label{class_a_s_e_p___master_actor_a3a29faf15763ea9aa8b50390c0507e77}} 
 \mbox{\hyperlink{struct_f_external_doors}{FExternal\+Doors}} {\bfseries External\+Doors\+Configuration}
@@ -265,7 +261,7 @@ The resulting rotator.
 \doxysubsubsection{\texorpdfstring{DoesFloorExists()}{DoesFloorExists()}}
 {\footnotesize\ttfamily bool ASEP\+\_\+\+Master\+Actor\+::\+Does\+Floor\+Exists (\begin{DoxyParamCaption}\item[{int32}]{Target\+Floor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-Check if a floor exists. 
+//\+This function iterates through the Floor\+Configuration array to check if the Target\+Floor exists. If it does, it returns true, otherwise it returns false. 
 \begin{DoxyParams}{Parameters}
 {\em Target\+Floor} & The floor number to check for existence. \\
 \hline
@@ -303,19 +299,21 @@ This function toggles the elevator widget.
 \doxysubsubsection{\texorpdfstring{GenerateCollisionBoxes()}{GenerateCollisionBoxes()}}
 {\footnotesize\ttfamily void ASEP\+\_\+\+Master\+Actor\+::\+Generate\+Collision\+Boxes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-Generate the collision boxes. \mbox{\Hypertarget{class_a_s_e_p___master_actor_a12055c10bc24439f913486045b6e598e}\label{class_a_s_e_p___master_actor_a12055c10bc24439f913486045b6e598e}} 
+Generate the collision boxes. \mbox{\Hypertarget{class_a_s_e_p___master_actor_a9c375679a5bcbf755d735d6e50b5c494}\label{class_a_s_e_p___master_actor_a9c375679a5bcbf755d735d6e50b5c494}} 
 \index{ASEP\_MasterActor@{ASEP\_MasterActor}!GetClosestFloorToPlayer@{GetClosestFloorToPlayer}}
 \index{GetClosestFloorToPlayer@{GetClosestFloorToPlayer}!ASEP\_MasterActor@{ASEP\_MasterActor}}
 \doxysubsubsection{\texorpdfstring{GetClosestFloorToPlayer()}{GetClosestFloorToPlayer()}}
-{\footnotesize\ttfamily int ASEP\+\_\+\+Master\+Actor\+::\+Get\+Closest\+Floor\+To\+Player (\begin{DoxyParamCaption}\item[{APawn $\ast$}]{Player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily bool ASEP\+\_\+\+Master\+Actor\+::\+Get\+Closest\+Floor\+To\+Player (\begin{DoxyParamCaption}\item[{APawn $\ast$}]{Player,  }\item[{int \&}]{Floor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 This Function gets the closest floor to the player character pawn, if any. 
 \begin{DoxyParams}{Parameters}
 {\em Player} & The reference to the player character pawn \\
 \hline
+{\em Floor} & The closest floor to the player character pawn, if any \\
+\hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-The closest floor to the player character pawn, if any 
+True if player exists, false otherwise. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_a_s_e_p___master_actor_a61b91d5ddefd65a57a12038678f10579}\label{class_a_s_e_p___master_actor_a61b91d5ddefd65a57a12038678f10579}} 
 \index{ASEP\_MasterActor@{ASEP\_MasterActor}!GetCurrentAudioConfig@{GetCurrentAudioConfig}}
@@ -469,11 +467,11 @@ Move the elevator to the specified target floor.
 \doxysubsubsection{\texorpdfstring{OpenDoors()}{OpenDoors()}}
 {\footnotesize\ttfamily void ASEP\+\_\+\+Master\+Actor\+::\+Open\+Doors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-Open the elevator doors. \mbox{\Hypertarget{class_a_s_e_p___master_actor_ab997338be1f43fb761983fd0e0bb3e8b}\label{class_a_s_e_p___master_actor_ab997338be1f43fb761983fd0e0bb3e8b}} 
+Open the elevator doors. \mbox{\Hypertarget{class_a_s_e_p___master_actor_a0b6d7bcef246ff1e6e3caf9706a20173}\label{class_a_s_e_p___master_actor_a0b6d7bcef246ff1e6e3caf9706a20173}} 
 \index{ASEP\_MasterActor@{ASEP\_MasterActor}!PlaySound@{PlaySound}}
 \index{PlaySound@{PlaySound}!ASEP\_MasterActor@{ASEP\_MasterActor}}
 \doxysubsubsection{\texorpdfstring{PlaySound()}{PlaySound()}}
-{\footnotesize\ttfamily void ASEP\+\_\+\+Master\+Actor\+::\+Play\+Sound (\begin{DoxyParamCaption}\item[{bool}]{At\+Component,  }\item[{UAudio\+Component $\ast$}]{Target\+Component,  }\item[{USound\+Base $\ast$}]{Sound\+To\+Play }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily void ASEP\+\_\+\+Master\+Actor\+::\+Play\+Sound (\begin{DoxyParamCaption}\item[{bool}]{At\+Component,  }\item[{UAudio\+Component $\ast$}]{Target\+Component,  }\item[{USound\+Base $\ast$}]{Sound\+To\+Play }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
 
 Play a sound. 
 \begin{DoxyParams}{Parameters}
@@ -501,39 +499,27 @@ Set the starting floor.
 {\em New\+Floor} & The new starting floor. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_a_s_e_p___master_actor_a96f2b986ead295319c783eccf5f6dad6}\label{class_a_s_e_p___master_actor_a96f2b986ead295319c783eccf5f6dad6}} 
+\mbox{\Hypertarget{class_a_s_e_p___master_actor_a0f76662fd569a733314746826dd03a11}\label{class_a_s_e_p___master_actor_a0f76662fd569a733314746826dd03a11}} 
 \index{ASEP\_MasterActor@{ASEP\_MasterActor}!StopPlayingSound@{StopPlayingSound}}
 \index{StopPlayingSound@{StopPlayingSound}!ASEP\_MasterActor@{ASEP\_MasterActor}}
 \doxysubsubsection{\texorpdfstring{StopPlayingSound()}{StopPlayingSound()}}
-{\footnotesize\ttfamily void ASEP\+\_\+\+Master\+Actor\+::\+Stop\+Playing\+Sound (\begin{DoxyParamCaption}\item[{UAudio\+Component $\ast$}]{Target\+Component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily void ASEP\+\_\+\+Master\+Actor\+::\+Stop\+Playing\+Sound (\begin{DoxyParamCaption}\item[{UAudio\+Component $\ast$}]{Target\+Component }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
 
 Stop playing a sound. 
 \begin{DoxyParams}{Parameters}
 {\em Target\+Component} & The component to stop playing the sound on. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_a_s_e_p___master_actor_a656da1cf480fc3cab215a2ce86af89b7}\label{class_a_s_e_p___master_actor_a656da1cf480fc3cab215a2ce86af89b7}} 
+\mbox{\Hypertarget{class_a_s_e_p___master_actor_a3f4048ae3bbcd3ad118a4cc90e295d1b}\label{class_a_s_e_p___master_actor_a3f4048ae3bbcd3ad118a4cc90e295d1b}} 
 \index{ASEP\_MasterActor@{ASEP\_MasterActor}!UpdateInteractionBox@{UpdateInteractionBox}}
 \index{UpdateInteractionBox@{UpdateInteractionBox}!ASEP\_MasterActor@{ASEP\_MasterActor}}
 \doxysubsubsection{\texorpdfstring{UpdateInteractionBox()}{UpdateInteractionBox()}}
-{\footnotesize\ttfamily void ASEP\+\_\+\+Master\+Actor\+::\+Update\+Interaction\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily void ASEP\+\_\+\+Master\+Actor\+::\+Update\+Interaction\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
 
-Update the interaction box. \mbox{\Hypertarget{class_a_s_e_p___master_actor_a59a8e6d1c30c07e3f415dd40d9fc0dd2}\label{class_a_s_e_p___master_actor_a59a8e6d1c30c07e3f415dd40d9fc0dd2}} 
-\index{ASEP\_MasterActor@{ASEP\_MasterActor}!UPROPERTY@{UPROPERTY}}
-\index{UPROPERTY@{UPROPERTY}!ASEP\_MasterActor@{ASEP\_MasterActor}}
-\doxysubsubsection{\texorpdfstring{UPROPERTY()}{UPROPERTY()}}
-{\footnotesize\ttfamily ASEP\+\_\+\+Master\+Actor\+::\+UPROPERTY (\begin{DoxyParamCaption}\item[{Edit\+Anywhere}]{,  }\item[{Blueprint\+Read\+Only}]{,  }\item[{Category}]{ = {\ttfamily \char`\"{}SEP\char`\"{}},  }\item[{meta}]{ = {\ttfamily (EditCondition=\char`\"{}bUseSaveGameSystem\char`\"{},~EditConditionHides)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-Save\+Settings property for handling save game settings, only in use when Use\+Save\+Game\+System is true. 
+Update the interaction box. 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_a_s_e_p___master_actor_a22e9db7c0adb7fdffbda4f85075cae14}\label{class_a_s_e_p___master_actor_a22e9db7c0adb7fdffbda4f85075cae14}} 
-\index{ASEP\_MasterActor@{ASEP\_MasterActor}!bUseSaveGameSystem@{bUseSaveGameSystem}}
-\index{bUseSaveGameSystem@{bUseSaveGameSystem}!ASEP\_MasterActor@{ASEP\_MasterActor}}
-\doxysubsubsection{\texorpdfstring{bUseSaveGameSystem}{bUseSaveGameSystem}}
-{\footnotesize\ttfamily bool ASEP\+\_\+\+Master\+Actor\+::b\+Use\+Save\+Game\+System\hspace{0.3cm}{\ttfamily [protected]}}
-
-Whether to use the save game system or not. Enable this to use the save game system, disable it to prevent its usage. \mbox{\Hypertarget{class_a_s_e_p___master_actor_adb0b697a4bf04e0f9b5ab8176ad07b86}\label{class_a_s_e_p___master_actor_adb0b697a4bf04e0f9b5ab8176ad07b86}} 
+\mbox{\Hypertarget{class_a_s_e_p___master_actor_adb0b697a4bf04e0f9b5ab8176ad07b86}\label{class_a_s_e_p___master_actor_adb0b697a4bf04e0f9b5ab8176ad07b86}} 
 \index{ASEP\_MasterActor@{ASEP\_MasterActor}!ElevatorMovementSpeed@{ElevatorMovementSpeed}}
 \index{ElevatorMovementSpeed@{ElevatorMovementSpeed}!ASEP\_MasterActor@{ASEP\_MasterActor}}
 \doxysubsubsection{\texorpdfstring{ElevatorMovementSpeed}{ElevatorMovementSpeed}}

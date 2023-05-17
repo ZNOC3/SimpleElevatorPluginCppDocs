@@ -107,15 +107,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7b88f142105bea03dd76a763d975e66e"><td class="memItemLeft" align="right" valign="top"><a id="a7b88f142105bea03dd76a763d975e66e" name="a7b88f142105bea03dd76a763d975e66e"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>UPROPERTY</b> (EditAnywhere, BlueprintReadOnly, Category=&quot;SEP&quot;, meta=(ClampMin=0.1, ClampMax=10.0, EditCondition=&quot;DoorType == EDoorMovementType::Linear&quot;, EditConditionHides)) float DoorMovementSpeed</td></tr>
 <tr class="separator:a7b88f142105bea03dd76a763d975e66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e87056e400432a401ae6e1a057be7ca"><td class="memItemLeft" align="right" valign="top"><a id="a2e87056e400432a401ae6e1a057be7ca" name="a2e87056e400432a401ae6e1a057be7ca"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>UPROPERTY</b> (EditInstanceOnly, BlueprintReadWrite, Category=&quot;SEP&quot;, meta=(EditCondition=&quot;DoorMovementDirection == EDoorDirection::Z &amp;&amp; DoorType == EDoorMovementType::Linear&quot;, EditConditionHides)) bool bDoorsMoveInTheSameDirection</td></tr>
-<tr class="separator:a2e87056e400432a401ae6e1a057be7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c0aa7debe3358c35f3c45662fbfd2ca"><td class="memItemLeft" align="right" valign="top"><a id="a4c0aa7debe3358c35f3c45662fbfd2ca" name="a4c0aa7debe3358c35f3c45662fbfd2ca"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>UPROPERTY</b> (EditInstanceOnly, BlueprintReadWrite, Category=&quot;SEP&quot;, meta=(EditCondition=&quot;DoorType == EDoorMovementType::Linear&quot;, EditConditionHides)) float OpenedDoorLocation</td></tr>
-<tr class="separator:a4c0aa7debe3358c35f3c45662fbfd2ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1beed18997c07f533743580c422e9f0a"><td class="memItemLeft" align="right" valign="top"><a id="a1beed18997c07f533743580c422e9f0a" name="a1beed18997c07f533743580c422e9f0a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>UPROPERTY</b> (EditInstanceOnly, BlueprintReadWrite, Category=&quot;SEP&quot;, meta=(EditCondition=&quot;DoorType == EDoorMovementType::Linear&quot;, EditConditionHides)) float ClosedDoorLocation=0</td></tr>
-<tr class="separator:a1beed18997c07f533743580c422e9f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a076972defa3d2304e845628b0410b2d4"><td class="memItemLeft" align="right" valign="top"><a id="a076972defa3d2304e845628b0410b2d4" name="a076972defa3d2304e845628b0410b2d4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>UPROPERTY</b> (EditAnywhere, BlueprintReadOnly, Category=&quot;SEP&quot;, meta=(EditCondition=&quot;DoorType == EDoorMovementType::Linear&quot;, EditConditionHides)) bool bLeftDoorMirrorsMovement</td></tr>
+<tr class="separator:a076972defa3d2304e845628b0410b2d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6da042973ec70ca6845a9257e4e5326f"><td class="memItemLeft" align="right" valign="top"><a id="a6da042973ec70ca6845a9257e4e5326f" name="a6da042973ec70ca6845a9257e4e5326f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>UPROPERTY</b> (EditInstanceOnly, BlueprintReadWrite, Category=&quot;SEP&quot;, meta=(EditCondition=&quot;DoorType == EDoorMovementType::Linear &amp;&amp; bLeftDoorMirrorsMovement&quot;, EditConditionHides)) float OpenedDoorLocation</td></tr>
+<tr class="separator:a6da042973ec70ca6845a9257e4e5326f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac174ba36c5b2a21ae77bf5e44bf78b62"><td class="memItemLeft" align="right" valign="top"><a id="ac174ba36c5b2a21ae77bf5e44bf78b62" name="ac174ba36c5b2a21ae77bf5e44bf78b62"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>UPROPERTY</b> (EditInstanceOnly, BlueprintReadWrite, Category=&quot;SEP&quot;, meta=(EditCondition=&quot;DoorType == EDoorMovementType::Linear &amp;&amp; bLeftDoorMirrorsMovement&quot;, EditConditionHides)) float ClosedDoorLocation=0</td></tr>
+<tr class="separator:ac174ba36c5b2a21ae77bf5e44bf78b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74889c327f3241497d5d8e0e35a1adf3"><td class="memItemLeft" align="right" valign="top"><a id="a74889c327f3241497d5d8e0e35a1adf3" name="a74889c327f3241497d5d8e0e35a1adf3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>UPROPERTY</b> (EditInstanceOnly, BlueprintReadWrite, Category=&quot;SEP&quot;, meta=(EditCondition=&quot;DoorType == EDoorMovementType::Linear &amp;&amp; bLeftDoorMirrorsMovement == false&quot;, EditConditionHides)) float LeftDoorOpenedLocation</td></tr>
+<tr class="separator:a74889c327f3241497d5d8e0e35a1adf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0afa9e7e8af916cb5673f2d657fea5b7"><td class="memItemLeft" align="right" valign="top"><a id="a0afa9e7e8af916cb5673f2d657fea5b7" name="a0afa9e7e8af916cb5673f2d657fea5b7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>UPROPERTY</b> (EditInstanceOnly, BlueprintReadWrite, Category=&quot;SEP&quot;, meta=(EditCondition=&quot;DoorType == EDoorMovementType::Linear &amp;&amp; bLeftDoorMirrorsMovement == false&quot;, EditConditionHides)) float RightDoorOpenedLocation</td></tr>
+<tr class="separator:a0afa9e7e8af916cb5673f2d657fea5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a520fbb991d482feb581af9b6b07ed6b5"><td class="memItemLeft" align="right" valign="top"><a id="a520fbb991d482feb581af9b6b07ed6b5" name="a520fbb991d482feb581af9b6b07ed6b5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>UPROPERTY</b> (EditInstanceOnly, BlueprintReadWrite, Category=&quot;SEP&quot;, meta=(EditCondition=&quot;DoorType == EDoorMovementType::Linear &amp;&amp; bLeftDoorMirrorsMovement == false&quot;, EditConditionHides)) float LeftDoorClosedLocation=0.f</td></tr>
+<tr class="separator:a520fbb991d482feb581af9b6b07ed6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5bd911bf826452797083c294f3814c6"><td class="memItemLeft" align="right" valign="top"><a id="ac5bd911bf826452797083c294f3814c6" name="ac5bd911bf826452797083c294f3814c6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>UPROPERTY</b> (EditInstanceOnly, BlueprintReadWrite, Category=&quot;SEP&quot;, meta=(EditCondition=&quot;DoorType == EDoorMovementType::Linear &amp;&amp; bLeftDoorMirrorsMovement == false&quot;, EditConditionHides)) float RightDoorClosedLocation=0.f</td></tr>
+<tr class="separator:ac5bd911bf826452797083c294f3814c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36e9a9cebe077619bbb7a896a8d482b1"><td class="memItemLeft" align="right" valign="top"><a id="a36e9a9cebe077619bbb7a896a8d482b1" name="a36e9a9cebe077619bbb7a896a8d482b1"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>UPROPERTY</b> (EditInstanceOnly, BlueprintReadWrite, Category=&quot;SEP&quot;, meta=(EditCondition=&quot;DoorType == EDoorMovementType::Curve&quot;, EditConditionHides)) bool bBothDoorsUseTheSameCurve</td></tr>
 <tr class="separator:a36e9a9cebe077619bbb7a896a8d482b1"><td class="memSeparator" colspan="2">&#160;</td></tr>

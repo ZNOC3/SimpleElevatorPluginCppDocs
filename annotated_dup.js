@@ -1,6 +1,7 @@
 var annotated_dup =
 [
     [ "ASEP_MasterActor", "de/d79/class_a_s_e_p___master_actor.html", "de/d79/class_a_s_e_p___master_actor" ],
+    [ "ASEP_SaveManager", "d1/d75/class_a_s_e_p___save_manager.html", "d1/d75/class_a_s_e_p___save_manager" ],
     [ "FAudioConfiguration", "d9/de9/struct_f_audio_configuration.html", null ],
     [ "FCurrentFloorDoorSettings", "d9/d9a/struct_f_current_floor_door_settings.html", null ],
     [ "FDelaySettings", "d7/ddf/struct_f_delay_settings.html", null ],
