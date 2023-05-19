@@ -235,14 +235,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ToggleElevatorWidget<
 <tr class="separator:a6c266713d619988480720ec2646dd37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fd3076d78da65c0810c82f8a4e8d29a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a8fd3076d78da65c0810c82f8a4e8d29a">GetNextFloorData</a> (const int32 PreviousFloor, <a class="el" href="../../dd/d52/struct_f_single_floor.html">FSingleFloor</a> &amp;Struct)</td></tr>
 <tr class="separator:a8fd3076d78da65c0810c82f8a4e8d29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88f4a5fd82ffe545df69f6e0682b3988"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a88f4a5fd82ffe545df69f6e0682b3988">DoesFloorExists</a> (int32 TargetFloor)</td></tr>
-<tr class="separator:a88f4a5fd82ffe545df69f6e0682b3988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4ecfb01699cc3debc95fb27eb330a61"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#aa4ecfb01699cc3debc95fb27eb330a61">DoesFloorExist</a> (int32 TargetFloor)</td></tr>
+<tr class="separator:aa4ecfb01699cc3debc95fb27eb330a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a059043a6566d5ee545fbba91c221d876"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a059043a6566d5ee545fbba91c221d876">LogFloorQueue</a> ()</td></tr>
 <tr class="separator:a059043a6566d5ee545fbba91c221d876"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc0d4964a89260f04fc6b76091846a27"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#adc0d4964a89260f04fc6b76091846a27">HasElevatorReachedTarget</a> () const</td></tr>
 <tr class="separator:adc0d4964a89260f04fc6b76091846a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f7e893a630f149e2986850cb91ff61b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a5f7e893a630f149e2986850cb91ff61b">ResetCollisionBoxes</a> ()</td></tr>
-<tr class="separator:a5f7e893a630f149e2986850cb91ff61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61b91d5ddefd65a57a12038678f10579"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/de9/struct_f_audio_configuration.html">FAudioConfiguration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a61b91d5ddefd65a57a12038678f10579">GetCurrentAudioConfig</a> ()</td></tr>
 <tr class="separator:a61b91d5ddefd65a57a12038678f10579"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b6d7bcef246ff1e6e3caf9706a20173"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/class_a_s_e_p___master_actor.html#a0b6d7bcef246ff1e6e3caf9706a20173">PlaySound</a> (bool AtComponent, UAudioComponent *TargetComponent, USoundBase *SoundToPlay) const</td></tr>
@@ -313,9 +311,6 @@ int32&#160;</td><td class="memItemRight" valign="bottom"><b>CurrentElevatorFloor
 <tr class="memitem:ad42ac4167806f120dc306ca90302bb8e"><td class="memItemLeft" align="right" valign="top"><a id="ad42ac4167806f120dc306ca90302bb8e" name="ad42ac4167806f120dc306ca90302bb8e"></a>
 TArray&lt; int32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>FloorsQueue</b></td></tr>
 <tr class="separator:ad42ac4167806f120dc306ca90302bb8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a822dda08f44c97a57d019552a951914f"><td class="memItemLeft" align="right" valign="top"><a id="a822dda08f44c97a57d019552a951914f" name="a822dda08f44c97a57d019552a951914f"></a>
-<a class="el" href="../../dc/de8/struct_f_save_data.html">FSaveData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SaveData</b></td></tr>
-<tr class="separator:a822dda08f44c97a57d019552a951914f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a11ab9041a03de7dee69156e31c010612" name="a11ab9041a03de7dee69156e31c010612"></a>
@@ -435,8 +430,8 @@ TArray&lt; int32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Floo
 
 </div>
 </div>
-<a id="a88f4a5fd82ffe545df69f6e0682b3988" name="a88f4a5fd82ffe545df69f6e0682b3988"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88f4a5fd82ffe545df69f6e0682b3988">&#9670;&#160;</a></span>DoesFloorExists()</h2>
+<a id="aa4ecfb01699cc3debc95fb27eb330a61" name="aa4ecfb01699cc3debc95fb27eb330a61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4ecfb01699cc3debc95fb27eb330a61">&#9670;&#160;</a></span>DoesFloorExist()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -445,7 +440,7 @@ TArray&lt; int32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Floo
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool ASEP_MasterActor::DoesFloorExists </td>
+          <td class="memname">bool ASEP_MasterActor::DoesFloorExist </td>
           <td>(</td>
           <td class="paramtype">int32&#160;</td>
           <td class="paramname"><em>TargetFloor</em></td><td>)</td>
@@ -1110,32 +1105,6 @@ TArray&lt; int32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Floo
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a5f7e893a630f149e2986850cb91ff61b" name="a5f7e893a630f149e2986850cb91ff61b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f7e893a630f149e2986850cb91ff61b">&#9670;&#160;</a></span>ResetCollisionBoxes()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ASEP_MasterActor::ResetCollisionBoxes </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Reset the collision boxes. </p>
 
 </div>
 </div>

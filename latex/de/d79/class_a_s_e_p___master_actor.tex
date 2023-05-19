@@ -134,13 +134,11 @@ bool \mbox{\hyperlink{class_a_s_e_p___master_actor_a6c266713d619988480720ec2646d
 \item 
 bool \mbox{\hyperlink{class_a_s_e_p___master_actor_a8fd3076d78da65c0810c82f8a4e8d29a}{Get\+Next\+Floor\+Data}} (const int32 Previous\+Floor, \mbox{\hyperlink{struct_f_single_floor}{FSingle\+Floor}} \&Struct)
 \item 
-bool \mbox{\hyperlink{class_a_s_e_p___master_actor_a88f4a5fd82ffe545df69f6e0682b3988}{Does\+Floor\+Exists}} (int32 Target\+Floor)
+bool \mbox{\hyperlink{class_a_s_e_p___master_actor_aa4ecfb01699cc3debc95fb27eb330a61}{Does\+Floor\+Exist}} (int32 Target\+Floor)
 \item 
 void \mbox{\hyperlink{class_a_s_e_p___master_actor_a059043a6566d5ee545fbba91c221d876}{Log\+Floor\+Queue}} ()
 \item 
 bool \mbox{\hyperlink{class_a_s_e_p___master_actor_adc0d4964a89260f04fc6b76091846a27}{Has\+Elevator\+Reached\+Target}} () const
-\item 
-void \mbox{\hyperlink{class_a_s_e_p___master_actor_a5f7e893a630f149e2986850cb91ff61b}{Reset\+Collision\+Boxes}} ()
 \item 
 \mbox{\hyperlink{struct_f_audio_configuration}{FAudio\+Configuration}} \mbox{\hyperlink{class_a_s_e_p___master_actor_a61b91d5ddefd65a57a12038678f10579}{Get\+Current\+Audio\+Config}} ()
 \item 
@@ -211,9 +209,6 @@ int32 {\bfseries Current\+Elevator\+Floor}
 \item 
 \mbox{\Hypertarget{class_a_s_e_p___master_actor_ad42ac4167806f120dc306ca90302bb8e}\label{class_a_s_e_p___master_actor_ad42ac4167806f120dc306ca90302bb8e}} 
 TArray$<$ int32 $>$ {\bfseries Floors\+Queue}
-\item 
-\mbox{\Hypertarget{class_a_s_e_p___master_actor_a822dda08f44c97a57d019552a951914f}\label{class_a_s_e_p___master_actor_a822dda08f44c97a57d019552a951914f}} 
-\mbox{\hyperlink{struct_f_save_data}{FSave\+Data}} {\bfseries Save\+Data}
 \end{DoxyCompactItemize}
 
 
@@ -255,11 +250,11 @@ Convert a vector to a rotator. Note that a rotator is a vector value with clampi
 \begin{DoxyReturn}{Returns}
 The resulting rotator. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_a_s_e_p___master_actor_a88f4a5fd82ffe545df69f6e0682b3988}\label{class_a_s_e_p___master_actor_a88f4a5fd82ffe545df69f6e0682b3988}} 
-\index{ASEP\_MasterActor@{ASEP\_MasterActor}!DoesFloorExists@{DoesFloorExists}}
-\index{DoesFloorExists@{DoesFloorExists}!ASEP\_MasterActor@{ASEP\_MasterActor}}
-\doxysubsubsection{\texorpdfstring{DoesFloorExists()}{DoesFloorExists()}}
-{\footnotesize\ttfamily bool ASEP\+\_\+\+Master\+Actor\+::\+Does\+Floor\+Exists (\begin{DoxyParamCaption}\item[{int32}]{Target\+Floor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{class_a_s_e_p___master_actor_aa4ecfb01699cc3debc95fb27eb330a61}\label{class_a_s_e_p___master_actor_aa4ecfb01699cc3debc95fb27eb330a61}} 
+\index{ASEP\_MasterActor@{ASEP\_MasterActor}!DoesFloorExist@{DoesFloorExist}}
+\index{DoesFloorExist@{DoesFloorExist}!ASEP\_MasterActor@{ASEP\_MasterActor}}
+\doxysubsubsection{\texorpdfstring{DoesFloorExist()}{DoesFloorExist()}}
+{\footnotesize\ttfamily bool ASEP\+\_\+\+Master\+Actor\+::\+Does\+Floor\+Exist (\begin{DoxyParamCaption}\item[{int32}]{Target\+Floor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 //\+This function iterates through the Floor\+Configuration array to check if the Target\+Floor exists. If it does, it returns true, otherwise it returns false. 
 \begin{DoxyParams}{Parameters}
@@ -482,13 +477,7 @@ Play a sound.
 {\em Sound\+To\+Play} & The sound to play. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_a_s_e_p___master_actor_a5f7e893a630f149e2986850cb91ff61b}\label{class_a_s_e_p___master_actor_a5f7e893a630f149e2986850cb91ff61b}} 
-\index{ASEP\_MasterActor@{ASEP\_MasterActor}!ResetCollisionBoxes@{ResetCollisionBoxes}}
-\index{ResetCollisionBoxes@{ResetCollisionBoxes}!ASEP\_MasterActor@{ASEP\_MasterActor}}
-\doxysubsubsection{\texorpdfstring{ResetCollisionBoxes()}{ResetCollisionBoxes()}}
-{\footnotesize\ttfamily void ASEP\+\_\+\+Master\+Actor\+::\+Reset\+Collision\+Boxes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-Reset the collision boxes. \mbox{\Hypertarget{class_a_s_e_p___master_actor_af024a1b07f0f3eb6089a78c480a99f13}\label{class_a_s_e_p___master_actor_af024a1b07f0f3eb6089a78c480a99f13}} 
+\mbox{\Hypertarget{class_a_s_e_p___master_actor_af024a1b07f0f3eb6089a78c480a99f13}\label{class_a_s_e_p___master_actor_af024a1b07f0f3eb6089a78c480a99f13}} 
 \index{ASEP\_MasterActor@{ASEP\_MasterActor}!SetStartingFloor@{SetStartingFloor}}
 \index{SetStartingFloor@{SetStartingFloor}!ASEP\_MasterActor@{ASEP\_MasterActor}}
 \doxysubsubsection{\texorpdfstring{SetStartingFloor()}{SetStartingFloor()}}
